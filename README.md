@@ -8,13 +8,10 @@ https://medium.com/jpa-java-persistence-api-guide/hibernate-optimization-with-ba
 
 This example shows @BatchSize At Collection Level
 
-# @BatchSize At Class Level
-
-Applying @BatchSize(size=50) to an entity class instructs Hibernate to load these entities in batches of 50 instances at
-a time during lazy loading.
 
 # @BatchSize At Collection Level
+Author has OneToMany relationship to Book
 
-It loads the books of N authors at once. 
+Applying @BatchSize(size=N) at collection level loads the books of N authors at once when iterating over Authors 
 
 
