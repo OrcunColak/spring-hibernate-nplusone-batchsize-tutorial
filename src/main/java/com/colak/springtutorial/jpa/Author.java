@@ -26,10 +26,10 @@ public class Author {
 
     private String name;
 
-    // It will load 2 Authors
+    // It will load books of 3 Authors at once
     // select * from  author a
-    // select * from book b where b.author_id in (?, ?)
-    @BatchSize(size = 2)
+    // select * from book b where b.author_id in (?, ?, ?)
+    @BatchSize(size = 3)
     @OneToMany(mappedBy = "author", fetch = FetchType.LAZY)
     private List<Book> books;
 
